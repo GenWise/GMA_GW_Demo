@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gifted World x GMA | Showcase</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .modal { display: none; }
+    .modal.active { display: flex; }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+    .tab-button.active { border-bottom-color: #2563eb; color: #2563eb; }
+    /* Logo styles for better visibility */
+    .logo-container { 
+        display: flex; 
+        align-items: center; 
+        gap: 1rem;
+    }
+    .logo-gw {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+    .logo-gma {
+        height: 40px;
+        width: auto;
+        object-fit: contain;
+    }
+    /* Fallback styles */
+    .logo-fallback {
+        padding: 8px 16px;
+        background: #f3f4f6;
+        border-radius: 8px;
+        font-weight: 600;
+        color: #1f2937;
+    }
+</style>
+</head>
+<body class="bg-gray-50 text-gray-700 antialiased">
+<!-- Navigation -->
+<nav class="bg-white shadow-sm sticky top-0 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-16">
+<div class="logo-container">
+    <!-- Gifted World Logo -->
+    <div class="logo-wrapper">
+        <img alt="Gifted World" class="logo-gw" src="https://raw.githubusercontent.com/GenWise/GMA_GW_Demo/main/logos/GW_logo.jpg" />
+        <div class="logo-fallback" style="display:none;">Gifted World</div>
+    </div>
+    <!-- GMA Logo -->
+    <div class="logo-wrapper">
+        <img alt="GEMS Modern Academy" class="logo-gma" src="https://raw.githubusercontent.com/GenWise/GMA_GW_Demo/main/logos/GMA_Logo.png" />
+        <div class="logo-fallback" style="display:none;">GMA</div>
+    </div>
+</div>
+<div class="hidden md:block">
+<div class="ml-10 flex items-baseline space-x-4">
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#featured-highlights">Student Voices</a>
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#opportunities">Student Courses</a>
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#student-directory">Student Hub</a>
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#educator-voices">Educator Voices</a>
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#opportunities" onclick="showEducatorTab(event)">Educator Courses</a>
+<a class="text-gray-600 hover:bg-gray-100 hover:text-gray-800 px-3 py-2 text-sm font-medium" href="#parent-resources">Parent Blog</a>
+</div>
+</div>
+</div>
+</div>
+</nav>
+
+<!-- Header -->
+<header class="bg-blue-700 py-16 sm:py-24 text-white">
+<div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<h1 class="text-4xl sm:text-5xl font-bold tracking-tight">
+    GEMS Modern Academy <br/>@Gifted World
+</h1>
+<p class="mt-6 text-lg sm:text-xl leading-8 text-blue-100 max-w-2xl mx-auto">
+    Welcome GMA students, parents, and educators! This space celebrates our vibrant community's achievements and highlights the exciting learning journeys available through our partnership with Gifted World. Discover how we nurture talent and foster excellence together.
+</p>
+</div>
+</header>
+
+<!-- Simpler version without animation -->
+<section class="bg-white border-y border-gray-200 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap justify-center items-center gap-8 text-center">
+            <div class="px-8">
+                <p class="text-4xl font-bold text-blue-600">200+</p>
+                <p class="text-gray-700 mt-1">GMA Students on Gifted World</p>
+            </div>
+            <div class="w-px h-16 bg-gray-300 hidden md:block"></div>
+            <div class="px-8">
+                <p class="text-4xl font-bold text-purple-600">30+</p>
+                <p class="text-gray-700 mt-1">GMA Educators Trained</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+<!-- Featured Students Section -->
+<section class="mb-16" id="featured-highlights">
+<div class="mb-12">
+<h2 class="text-3xl font-semibold text-gray-800 mb-2 text-center">Meet Our Student Stars from GMA</h2>
+<p class="text-center text-gray-600 max-w-2xl mx-auto">Get to know some of the exceptional students from GEMS Modern Academy who are making their mark on the Gifted World platform. Their stories inspire and showcase the diverse talents within our community.</p>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Student Card 1 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="h-56 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-3xl font-bold">VM</span>
+        </div>
+        <p class="text-sm font-medium">Vrishaan Master</p>
+    </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800">Vrishaan Master</h3>
+<p class="text-blue-600 text-sm mb-2">ATS Gold Scholar, Grade 10</p>
+<p class="text-sm text-gray-600 mb-4">ATS Gold Scholar, completed 5 courses, and an active contributor to the GW student blog. Passionate about physics and AI.</p>
+<button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg transition-colors" onclick="openModal('vrishaanModal')">Read More</button>
+</div>
+</div>
+
+<!-- Student Card 2 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="h-56 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-3xl font-bold">ST</span>
+        </div>
+        <p class="text-sm font-medium">Sarah Thomas</p>
+    </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800">Sarah Thomas</h3>
+<p class="text-green-600 text-sm mb-2">Grade 9, GSP 2023</p>
+<p class="text-sm text-gray-600 mb-4">An articulate and passionate learner, Sarah stood out for her leadership and teamwork in project-based learning environments.</p>
+<button class="w-full bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded-lg transition-colors" onclick="openModal('sarahModal')">Read More</button>
+</div>
+</div>
+
+<!-- Student Card 3 -->
+<div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+<div class="h-56 bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-24 h-24 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-3xl font-bold">AK</span>
+        </div>
+        <p class="text-sm font-medium">Aisha Khan</p>
+    </div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-800">Aisha Khan</h3>
+<p class="text-red-500 text-sm mb-2">GSP Alumna, Grade 8</p>
+<p class="text-sm text-gray-600 mb-4">An enthusiastic GSP alumna who excelled in creative writing and critical thinking courses. Now mentors younger students.</p>
+<button class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors" onclick="openModal('aishaModal')">Read More</button>
+</div>
+</div>
+</div>
+
+<!-- Student Testimonials -->
+<div class="mt-16">
+<h3 class="text-2xl font-semibold text-gray-800 mb-8 text-center">GMA Student Voices</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<blockquote class="text-gray-600 italic">"Gifted World's courses challenged me in ways school couldn't. The mentors are amazing!"</blockquote>
+<p class="mt-3 text-sm font-medium text-blue-700">- Rohan S., Grade 9 (ATS Silver Medalist)</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<blockquote class="text-gray-600 italic">"As a parent, I've seen my child's confidence soar thanks to the supportive environment at Gifted World."</blockquote>
+<p class="mt-3 text-sm font-medium text-green-700">- Parent of Ananya P., Grade 7</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<blockquote class="text-gray-600 italic">"The teacher PD courses on GW have been invaluable. I'm bringing new, exciting ideas to my classroom."</blockquote>
+<p class="mt-3 text-sm font-medium text-red-700">- Mr. David Lee, Science Teacher</p>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg">
+<blockquote class="text-gray-600 italic">"The summer program was the highlight of my year! I made friends from all over and learned so much."</blockquote>
+<p class="mt-3 text-sm font-medium text-purple-700">- Zara F., Grade 11 (GSP Participant)</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Sharada Video Section -->
+<section class="mb-16">
+<h2 class="text-3xl font-semibold text-gray-800 mb-4 text-center">Spotlight: Sharada Kenkare, Dean of Studies – Curriculum</h2>
+<div class="flex justify-center">
+<iframe allowfullscreen="" class="rounded-xl shadow-md" frameborder="0" height="315" src="https://www.youtube.com/embed/2FK2HWIIOC4?start=114&autoplay=1&mute=1" title="Sharada Kenkere Gifted World" width="560"></iframe>
+</div>
+<div class="mt-6 max-w-4xl mx-auto space-y-6">
+<blockquote class="border-l-4 border-blue-600 pl-6 py-4 bg-blue-50 text-blue-800 italic text-lg rounded-md shadow">
+"It's not just about teaching gifted students — it's about understanding how to nurture giftedness in every learner."
+</blockquote>
+<blockquote class="border-l-4 border-emerald-600 pl-6 py-4 bg-emerald-50 text-emerald-800 italic text-lg rounded-md shadow">
+"It's a learning vacation where students don't just study, they explore, collaborate, and come back more curious."
+</blockquote>
+</div>
+</section>
+
+<!-- Opportunities Section -->
+<section class="mb-16 py-12 bg-blue-50 rounded-xl" id="opportunities">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<h2 class="text-3xl font-semibold text-gray-800 mb-2 text-center">Explore Your Next Adventure with Gifted World</h2>
+<p class="text-center text-gray-600 max-w-2xl mx-auto">Discover a range of programs tailored for GEMS Modern Academy students and educators. From enriching courses to immersive summer experiences and professional development, find your path to growth.</p>
+</div>
+<div class="flex border-b border-gray-300 mb-8 justify-center">
+<button class="tab-button py-3 px-6 text-lg font-medium text-gray-500 hover:text-blue-600 border-b-2 border-transparent active" data-tab="students">For Students</button>
+<button class="tab-button py-3 px-6 text-lg font-medium text-gray-500 hover:text-blue-600 border-b-2 border-transparent" data-tab="teachers">For Educators</button>
+</div>
+<div class="tab-content active" id="students-tab">
+<h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center sm:text-left">Opportunities for Students</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-blue-700 mb-2">Gifted Online Summer Program - July 2025</h4>
+<p class="text-sm text-gray-600 mb-3">An immersive online experience with diverse courses, workshops, and collaborative projects.</p>
+<p class="text-xs text-gray-500 mb-1"><strong>Dates:</strong> July 1 - July 26, 2025</p>
+<p class="text-xs text-gray-500 mb-4"><strong>Target:</strong> Grades 7-12</p>
+<a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">Learn More &amp; Register</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-blue-700 mb-2">Concepts in Science (Advanced)</h4>
+<p class="text-sm text-gray-600 mb-3">Explore cutting-edge topics in physics, biology, and chemistry. Pre-requisites apply.</p>
+<p class="text-xs text-gray-500 mb-1"><strong>Next Cohort:</strong> September 2024</p>
+<p class="text-xs text-gray-500 mb-4"><strong>Target:</strong> Grades 10-12</p>
+<a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">View Course Details</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-blue-700 mb-2">Masterclass: Narrative Thinking &amp; Storytelling</h4>
+<p class="text-sm text-gray-600 mb-3">Unlock the power of storytelling with acclaimed author Dr. Elena Vance. Limited seats.</p>
+<p class="text-xs text-gray-500 mb-1"><strong>Date:</strong> October 12, 2024</p>
+<p class="text-xs text-gray-500 mb-4"><strong>Target:</strong> Grades 9-12</p>
+<a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">Reserve Your Spot</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-blue-700 mb-2">DNA Detectives: Intro to Forensics</h4>
+<p class="text-sm text-gray-600 mb-3">Solve mysteries using the science of DNA. A hands-on, project-based course.</p>
+<p class="text-xs text-gray-500 mb-1"><strong>Next Cohort:</strong> November 2024</p>
+<p class="text-xs text-gray-500 mb-4"><strong>Target:</strong> Grades 8-10</p>
+<a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">Explore Course</a>
+</div>
+</div>
+</div>
+<div class="tab-content" id="teachers-tab">
+<h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center sm:text-left">Professional Development for Educators</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-green-700 mb-2">My Misconception Mentor – Math Series</h4>
+<p class="text-sm text-gray-600 mb-3">Identify and address common student misconceptions in mathematics. Practical strategies and resources.</p>
+<a class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">Enroll Now</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<h4 class="text-xl font-semibold text-green-700 mb-2">GenAI for Educators: Classroom Integration</h4>
+<p class="text-sm text-gray-600 mb-3">Learn to ethically and effectively integrate Generative AI tools into your teaching practice.</p>
+<a class="inline-block bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-4 rounded-lg text-sm transition-colors" href="#">Course Information</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Student Directory Section -->
+<section class="mb-16" id="student-directory">
+<div class="mb-12">
+<h2 class="text-3xl font-semibold text-gray-800 mb-2 text-center">GMA Student Engagement Hub</h2>
+<p class="text-center text-gray-600 max-w-2xl mx-auto">Our GEMS Modern Academy students are actively participating and excelling in various Gifted World programs. This directory provides a glimpse into their diverse talents and achievements on the platform.</p>
+</div>
+<div class="mb-8 max-w-xl mx-auto">
+<div class="flex rounded-lg shadow-sm">
+<input class="flex-1 p-3 border-gray-300 rounded-l-lg focus:ring-blue-500 focus:border-blue-500 block w-full sm:text-sm" placeholder="Search students by name, achievement..." type="text"/>
+<button class="inline-flex items-center px-4 py-2 border border-l-0 border-gray-300 bg-gray-100 text-gray-600 rounded-r-lg hover:bg-gray-200" type="button">
+Search </button>
+</div>
+<p class="mt-2 text-xs text-gray-500 text-center">Search functionality is currently under development. Backend integration required.</p>
+</div>
+<div class="bg-white rounded-xl shadow-lg p-6 sm:p-8">
+<h3 class="text-xl font-semibold text-gray-800 mb-6">Directory of Engaged Students</h3>
+<div class="overflow-x-auto">
+<table class="min-w-full divide-y divide-gray-200">
+<thead class="bg-gray-50">
+<tr>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" scope="col">Student Name</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" scope="col">GSP Attendance</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" scope="col">ATS Medalist</th>
+<th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider" scope="col">Other Achievements</th>
+</tr>
+</thead>
+<tbody class="bg-white divide-y divide-gray-200">
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Rayan Ahmed</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">GSP 2024</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ATS Silver</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Top Coder Challenge Finalist</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Fatima Al Blooshi</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">GSP 2023</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Published Poet (Young Voices Anthology)</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Chen Zhao</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ATS Bronze</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Math Olympiad Participant</td>
+</tr>
+<tr>
+<td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Priya Sharma</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">GSP 2024</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">-</td>
+<td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Debate Club President</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="mt-4 text-xs text-gray-500">This is a sample listing. More student profiles will be added soon.</p>
+</div>
+</section>
+
+<!-- Educator Voices Section -->
+<section class="mb-16 py-12 bg-yellow-50 rounded-xl" id="educator-voices">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-semibold text-gray-800 mb-6 text-center">GMA Educator Voices</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"The classes are very interactive and useful, but I really love the assignments because there is lots to experiment and learn."</blockquote>
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"We got to know how you need to explain fraction operations... taking 1 or 2 extra periods to go into this more deeply is worth it."</blockquote>
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"This session has provided a lot of insight and meaningful discussions that will help us in our teaching process of Math."</blockquote>
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"Different strategies to analyze problems more effectively and apply concepts in new, meaningful ways."</blockquote>
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"I was even able to use most of the assignments with my gifted and talented students... wonderful to see them critically thinking."</blockquote>
+<blockquote class="bg-white p-4 rounded shadow text-gray-600 italic">"Ms. Sowmya is doing a great job in imparting the knowledge... My approach to teaching Math in primary has improved a lot."</blockquote>
+</div>
+</div>
+</section>
+
+<!-- Parent Resources Section -->
+<section class="mb-16 py-12 bg-green-50 rounded-xl" id="parent-resources">
+<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="mb-12">
+<h2 class="text-3xl font-semibold text-gray-800 mb-2 text-center">Resources for GMA Parents</h2>
+<p class="text-center text-gray-600 max-w-2xl mx-auto">We believe in a strong partnership with parents. Explore these curated articles and resources from Gifted World designed to help you support your child's learning journey and deepen your engagement with their educational development.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="h-40 bg-gradient-to-br from-teal-300 to-teal-500 rounded-md mb-4 flex items-center justify-center">
+    <span class="text-white text-lg font-semibold">Parent Blog 1</span>
+</div>
+<h3 class="text-lg font-semibold text-green-700 mb-2">Nurturing Potential</h3>
+<p class="text-sm text-gray-600 mb-4">Key insights from our Parent Hour on how to support gifted learners at home.</p>
+<a class="text-green-600 hover:text-green-700 font-medium text-sm" href="https://www.giftedworld.org/post/nurturing-potential-key-insights-from-our-parent-hour-on-gifted-learners" target="_blank">Read More →</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="h-40 bg-gradient-to-br from-purple-300 to-purple-500 rounded-md mb-4 flex items-center justify-center">
+    <span class="text-white text-lg font-semibold">Parent Blog 2</span>
+</div>
+<h3 class="text-lg font-semibold text-green-700 mb-2">Gen AI and Homework</h3>
+<p class="text-sm text-gray-600 mb-4">Reflections on the role of AI tools in student assignments and how parents can help navigate them.</p>
+<a class="text-green-600 hover:text-green-700 font-medium text-sm" href="https://www.giftedworld.org/post/gen-ai-and-homework-and-work-1" target="_blank">Read More →</a>
+</div>
+<div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+<div class="h-40 bg-gradient-to-br from-yellow-300 to-yellow-500 rounded-md mb-4 flex items-center justify-center">
+    <span class="text-white text-lg font-semibold">Parent Blog 3</span>
+</div>
+<h3 class="text-lg font-semibold text-green-700 mb-2">Nurturing Brilliance</h3>
+<p class="text-sm text-gray-600 mb-4">How challenge and community empower gifted learners – inspired by CTD and A/L.</p>
+<a class="text-green-600 hover:text-green-700 font-medium text-sm" href="https://www.giftedworld.org/post/nurturing-brilliance-how-challenge-and-community-empower-gifted-learners-insights-from-ctd-and-a-l" target="_blank">Read More →</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="text-center py-12 mb-10">
+<h2 class="text-2xl font-semibold text-gray-800 mb-3">Want to get involved or see someone featured?</h2>
+<p class="text-gray-600 mb-6 max-w-xl mx-auto">We're always looking to highlight the amazing achievements within our GMA community. If you have a story to share or want to learn more about our programs, please reach out.</p>
+<a class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg text-lg transition-colors inline-block" href="mailto:gma-liaison@giftedworld.org">Contact Us</a>
+<a class="ml-4 border border-blue-600 text-blue-600 hover:bg-blue-50 font-medium py-3 px-8 rounded-lg text-lg transition-colors inline-block" href="https://giftedworld.org/courses">Explore All GW Courses</a>
+</section>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-300 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div>
+<h5 class="text-lg font-semibold text-white mb-3">Gifted World</h5>
+<p class="text-sm">Nurturing the potential of gifted learners worldwide through innovative programs and a supportive community.</p>
+<div class="mt-4 bg-gray-700 px-4 py-2 rounded inline-block">
+    <span class="text-white font-semibold">Gifted World</span>
+</div>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-3">Quick Links</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-blue-400" href="#">About Us</a></li>
+<li><a class="hover:text-blue-400" href="#">Contact Gifted World</a></li>
+<li><a class="hover:text-blue-400" href="#">Blog</a></li>
+<li><a class="hover:text-blue-400" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-lg font-semibold text-white mb-3">Legal</h5>
+<ul class="space-y-2 text-sm">
+<li><a class="hover:text-blue-400" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-blue-400" href="#">Terms &amp; Conditions</a></li>
+<li><a class="hover:text-blue-400" href="#">GMA Partnership Contact: gma-liaison@giftedworld.org</a></li>
+</ul>
+</div>
+</div>
+<div class="mt-10 pt-8 border-t border-gray-700 text-center text-sm">
+<p>© <span id="currentYear"></span> Gifted World. All rights reserved. Designed for GEMS Modern Academy.</p>
+</div>
+</div>
+</footer>
+
+<!-- Modals -->
+<!-- Vrishaan Modal -->
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50" id="vrishaanModal">
+<div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-semibold text-gray-800">Vrishaan Master</h4>
+<button class="text-gray-500 hover:text-gray-700 text-2xl" onclick="closeModal('vrishaanModal')">×</button>
+</div>
+<div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 rounded-md mb-4 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-4xl font-bold">VM</span>
+        </div>
+    </div>
+</div>
+<p class="text-blue-600 font-medium mb-1">ATS Gold Scholar, Grade 10</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Courses Completed:</strong> Advanced Physics, Intro to AI, Quantum Mechanics Primer, Scientific Writing, Data Analysis with Python.</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Published Blog Content:</strong> "The Future of Quantum Computing" (Link to blog), "Exploring Black Holes" (Link to blog).</p>
+<p class="text-gray-600 font-semibold mb-1 mt-3">Testimonials:</p>
+<blockquote class="border-l-4 border-blue-500 pl-4 py-2 text-sm text-gray-600 italic bg-blue-50 rounded-r-md">
+"Vrishaan's curiosity is boundless. He consistently asks insightful questions that challenge everyone to think deeper." - Dr. Aris, Physics Mentor
+</blockquote>
+</div>
+</div>
+
+<!-- Sarah Modal -->
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50" id="sarahModal">
+<div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-semibold text-gray-800">Sarah Thomas</h4>
+<button class="text-gray-500 hover:text-gray-700 text-2xl" onclick="closeModal('sarahModal')">×</button>
+</div>
+<div class="h-48 bg-gradient-to-br from-green-400 to-green-600 rounded-md mb-4 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-4xl font-bold">ST</span>
+        </div>
+    </div>
+</div>
+<p class="text-green-600 font-medium mb-1">GSP 2023, Grade 9</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Courses Completed:</strong> Neuroscience for Teens, Creative Thinking Lab, Logic &amp; Strategy.</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Highlights:</strong> Led her team's capstone project on brain-computer interfaces and conducted an independent literature review.</p>
+<blockquote class="border-l-4 border-green-500 pl-4 py-2 text-sm text-gray-600 italic bg-green-50 rounded-r-md">
+"Sarah brings infectious enthusiasm and creative problem-solving to everything she touches." – Course Mentor
+</blockquote>
+</div>
+</div>
+
+<!-- Aisha Modal -->
+<div class="modal fixed inset-0 bg-black bg-opacity-50 items-center justify-center p-4 z-50" id="aishaModal">
+<div class="bg-white rounded-lg shadow-xl p-6 sm:p-8 max-w-lg w-full max-h-[90vh] overflow-y-auto">
+<div class="flex justify-between items-center mb-4">
+<h4 class="text-2xl font-semibold text-gray-800">Aisha Khan</h4>
+<button class="text-gray-500 hover:text-gray-700 text-2xl" onclick="closeModal('aishaModal')">×</button>
+</div>
+<div class="h-48 bg-gradient-to-br from-red-400 to-red-600 rounded-md mb-4 flex items-center justify-center">
+    <div class="text-white text-center">
+        <div class="w-32 h-32 bg-white bg-opacity-20 rounded-full mx-auto mb-3 flex items-center justify-center">
+            <span class="text-4xl font-bold">AK</span>
+        </div>
+    </div>
+</div>
+<p class="text-red-500 font-medium mb-1">GSP Alumna, Grade 8</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Courses Completed:</strong> Creative Writing Workshop, Critical Thinking &amp; Debate, Introduction to Podcasting.</p>
+<p class="text-gray-600 mb-2"><strong class="text-gray-700">Notable Achievements:</strong> Lead role in GSP final project, "The Young Changemakers Podcast". Winner of school's short story competition.</p>
+<p class="text-gray-600 font-semibold mb-1 mt-3">Feedback:</p>
+<blockquote class="border-l-4 border-red-500 pl-4 py-2 text-sm text-gray-600 italic bg-red-50 rounded-r-md">
+"Aisha has a natural flair for storytelling and a keen analytical mind. Her contributions to the GSP were outstanding." - Ms. Davies, GSP Facilitator
+</blockquote>
+</div>
+</div>
+
+<!-- JavaScript -->
+<script>
+    // Modal Functions
+    function openModal(modalId) {
+        document.getElementById(modalId).classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(modalId) {
+        document.getElementById(modalId).classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.modal.active').forEach(function (modal) {
+                modal.classList.remove('active');
+            });
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close modal on clicking outside
+    document.querySelectorAll('.modal').forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeModal(modal.id);
+            }
+        });
+    });
+
+    // Add this to your existing script section
+    // Animated counter function
+    function animateCounters() {
+        const counters = document.querySelectorAll('.counter');
+        const speed = 50; // The lower the slower
+        
+        counters.forEach(counter => {
+            const animate = () => {
+                const value = +counter.getAttribute('data-target');
+                const data = +counter.innerText;
+                
+                const time = value / speed;
+                if(data < value) {
+                    counter.innerText = Math.ceil(data + time) + '+';
+                    setTimeout(animate, 1);
+                } else {
+                    counter.innerText = value + '+';
+                }
+            }
+            
+            // Start animation when element is in view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animate();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            });
+            
+            observer.observe(counter);
+        });
+    }
+
+    // Tab functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Tab switching
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const tab = button.dataset.tab;
+
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === tab + '-tab') {
+                        content.classList.add('active');
+                    }
+                });
+            });
+        });
+    });
+
+    // Add this function to show educator tab
+    function showEducatorTab(event) {
+        event.preventDefault();
+        
+        // Scroll to opportunities section
+        document.getElementById('opportunities').scrollIntoView({ behavior: 'smooth' });
+        
+        // Switch to educator tab
+        document.querySelector('[data-tab="teachers"]').click();
+    }
+</script>
+</body>
+</html>
